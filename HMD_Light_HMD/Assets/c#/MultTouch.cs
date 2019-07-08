@@ -8,8 +8,7 @@ public class MultTouch : MonoBehaviour
 {
 
     public PhotonView PV;
-    public GameObject particle;
-    private bool IsMutitouch = false;
+    public bool IsMutitouch = false;
 
     // Use this for initialization
     void Start()
@@ -52,6 +51,9 @@ public class MultTouch : MonoBehaviour
         if (Physics.Raycast(ray, out hit))
         {
             print(hit.collider.gameObject.name);
+            //hit.collider.gameObject.GetComponent<Renderer>().material.color = Color.blue;
+            if(hit.collider.gameObject.tag == "Buttom")
+                hit.collider.gameObject.GetComponent<Buttom>().ClickButton();
         }
     }
 

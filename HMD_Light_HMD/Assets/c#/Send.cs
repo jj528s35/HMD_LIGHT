@@ -16,7 +16,9 @@ public class Send : MonoBehaviour
     public Camera cam;
     public GameObject plane;
     private float timer;
-    private bool Start_Sending = false;
+    public bool Start_Sending = true;
+
+    public float delaytime = 0.25f;
 
 
     void Start()
@@ -52,7 +54,7 @@ public class Send : MonoBehaviour
         timer += Time.deltaTime;
         PV = GetComponent<PhotonView>();
 
-        if (PhotonNetwork.IsMasterClient && timer > 0.25f && Start_Sending)
+        if (PhotonNetwork.IsMasterClient && timer > delaytime && Start_Sending)
         {
             timer = 0;
             // Render to RenderTexture
@@ -70,7 +72,7 @@ public class Send : MonoBehaviour
             //StartCoroutine(GetRenderTexturePixel(tex));
             tex.Apply();
             N = tex.EncodeToPNG();
-            plane.GetComponent<Renderer>().material.mainTexture = tex;
+            //plane.GetComponent<Renderer>().material.mainTexture = tex;
             
             //StartCoroutine(GetRenderTexturePixel());
 

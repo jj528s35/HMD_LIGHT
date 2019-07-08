@@ -51,6 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\c#\Buttom.cs" />
      <Compile Include="Assets\c#\MultTouch.cs" />
      <Compile Include="Assets\c#\NetworkManager.cs" />
      <Compile Include="Assets\c#\Send.cs" />
