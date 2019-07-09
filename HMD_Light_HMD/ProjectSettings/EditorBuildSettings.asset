@@ -11,3 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/scene/Shooter180.unity
     guid: b62ef4a8c87fa764bbfdb7d250ce1c08
+  - enabled: 1
+    path: Assets/scene/Flyer.unity
+    guid: 105cf9eb7fcb45844a1354966d06fcf1
+  - enabled: 1
+    path: Assets/scene/APP_scene.unity
+    guid: f555430ec4852f9428f4820eca3b8e3f

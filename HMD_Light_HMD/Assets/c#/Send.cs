@@ -20,7 +20,6 @@ public class Send : MonoBehaviour
 
     public float delaytime = 0.25f;
 
-
     void Start()
     {
         MyTexture = null;
